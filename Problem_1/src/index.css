@@ -1,0 +1,115 @@
+/* =========================
+   GLOBAL RESET (SAFE)
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   ROOT / BASE THEME
+========================= */
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Neutral defaults (DO NOT center here) */
+  color: #0f172a;
+  background-color: #f8fafc;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   BODY — VERY IMPORTANT
+========================= */
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  /* ❌ REMOVE flex centering from body */
+  display: block;
+
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #f8fafc,
+    #ffffff
+  );
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+  font-weight: 500;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* =========================
+   BUTTON RESET (NEUTRAL)
+========================= */
+
+button {
+  font-family: inherit;
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 0.95em;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+}
+
+button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* =========================
+   REMOVE DARK/LIGHT AUTO OVERRIDES
+========================= */
+
+/* ❌ REMOVED prefers-color-scheme */
+/* Your app controls theme explicitly */
+
+/* =========================
+   IMAGES / MEDIA
+========================= */
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}

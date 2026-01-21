@@ -1,0 +1,239 @@
+/* =========================
+   GLOBAL RESET & THEME
+========================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: rgba(255, 255, 255, 0.92);
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #eef2ff,
+    #f8fafc,
+    #ffffff
+  );
+  color: var(--text);
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px;
+  width: 100%;
+  max-width: 720px;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   FILE UPLOADER
+========================= */
+
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.3);
+}
+
+.file-name {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+
+.table-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--bg);
+}
+
+table {
+  width: 100%;
+  max-width: 1400px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface-2);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  z-index: 5;
+}
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.controls button:hover {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+}
+
+/* =========================
+   TABLE BODY
+========================= */
+
+tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+tbody tr:hover td {
+  background: #f8fafc;
+}
+
+/* =========================
+   HEATMAP CELL
+========================= */
+
+.heat-cell {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #0f172a;
+}
+
+.heat-cell small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+/* =========================
+   STICKY COLUMN (FREEZE)
+========================= */
+
+.sticky {
+  position: sticky;
+  left: 0;
+  background: var(--surface);
+  z-index: 4;
+  box-shadow: 2px 0 0 rgba(15, 23, 42, 0.06);
+}
+
+/* =========================
+   SCROLLBAR (SUBTLE)
+========================= */
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* =========================
+   EMPTY / FALLBACK
+========================= */
+
+.empty {
+  text-align: center;
+  padding: 80px;
+  color: var(--muted);
+  font-size: 15px;
+}
