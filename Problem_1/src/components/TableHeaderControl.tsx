@@ -67,8 +67,6 @@ export function TableHeaderControls({ columns, tableState }: Props) {
                 >
                   📌
                 </button>
-
-                {/* Hide */}
                 <button onClick={() => toggleHide(col)} title="Hide column">
                   👁️‍🗨️
                 </button>

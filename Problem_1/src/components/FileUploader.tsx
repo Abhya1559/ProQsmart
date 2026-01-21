@@ -24,12 +24,9 @@ export default function FileUploader({ onUpload }: Props) {
 
   return (
     <div className="upload-wrapper">
-      {/* Upload Button */}
       <label htmlFor="csv-upload" className="upload-btn">
         📂 Select CSV File
       </label>
-
-      {/* Hidden Native Input */}
       <input
         id="csv-upload"
         type="file"
@@ -37,8 +34,6 @@ export default function FileUploader({ onUpload }: Props) {
         hidden
         onChange={handleChange}
       />
-
-      {/* Selected File Name */}
       {fileName && (
         <p className="file-name">
           Selected file: <strong>{fileName}</strong>
